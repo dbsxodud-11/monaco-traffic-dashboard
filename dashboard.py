@@ -42,7 +42,7 @@ def cong_bucket(ratio):
 
 
 @st.cache_data
-def load_data():
+def load_data(mtime):  # mtime keys the cache so it reloads when the file changes
     with open(DATA_PATH, "rb") as f:
         return pickle.load(f)
 
@@ -342,7 +342,7 @@ if not os.path.exists(DATA_PATH):
              "먼저 `python collect_dashboard_data.py` 를 실행하세요.")
     st.stop()
 
-data = load_data()
+data = load_data(os.path.getmtime(DATA_PATH))
 base = data["base"]
 networks = data["networks"]
 net_names = list(networks.keys())
