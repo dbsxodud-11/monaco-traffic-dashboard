@@ -1,0 +1,12 @@
+# --- Dashboard 실행(보기)에 필요한 최소 의존성 ---
+streamlit>=1.58
+plotly>=6.8
+numpy>=2.0
+
+# --- 데이터 재생성(collect_dashboard_data.py)에만 추가로 필요 ---
+# (SUMO 바이너리 + 아래 패키지가 있어야 함. 보기만 할 거면 불필요)
+# networkx>=3.0
+# sumolib>=1.20
+# traci>=1.20
+# matplotlib>=3.5
+# tqdm>=4.0

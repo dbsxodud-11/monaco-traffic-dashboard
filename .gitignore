@@ -1,0 +1,14 @@
+# SUMO 시뮬레이션 중간 산출물 (collect 스크립트가 재생성)
+sumo/Monaco/dashboard/
+sumo/Monaco/*.sumocfg
+sumo/Monaco/*.tripinfo.xml
+sumo/Monaco/*.edgedata*.xml
+sumo/Monaco/gen_*.net.xml
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
